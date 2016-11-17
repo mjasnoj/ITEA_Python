@@ -17,3 +17,21 @@ l = [[1]*3 for i in range(3)]
 print l
 
 a = 1 if 1==0 else 2
+
+print [x for x in range(5)]
+print [2*x for x in range(5)]
+
+import random
+
+print [random.randint(1,5) for x in range(5)]
+print [2*x for x in range(5) if x % 2]
+
+print [[x, y] for x in [1,2,3] for y in [4,5,6]]
+
+print "123".isdigit()
+
+print "abrakadabra".replace("ab","ba")
+
+print "  sdfsd  efas asdfs ".strip()
+print "assdf123".isalpha()
+print "assdf".isalpha()
