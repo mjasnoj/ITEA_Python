@@ -1,0 +1,25 @@
+1. SoC - Separation of Concerns
+
+def add(x, y)
+  print x + y
+
+2 functions: one for print second for sum
+
+2. DRY - Don't repeat yourself
+when you press ctrl-V - smth goes wrong
+
+3. KISS - Keep It Simple, Stupid
+try to avoid unnecessary difficulties in infrastructure
+
+функция может возвращать несколько значений, хотя по факту это всего 1 кортеж
+функция - объект первого класса
+
+def add(x, y):
+    return x + y
+
+reduce(add, [1,2,3,4,5,6])
+add(1, 2)
+add(3, 3)
+add(6, 4)
+add(10, 5)
+add915, 6)
