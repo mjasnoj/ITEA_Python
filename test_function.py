@@ -15,3 +15,5 @@ def add(x, y):
 
 # python -m doctest test_function.py
 # python -m doctest test_function.py -v
+
+# CI for Python - buildbot
