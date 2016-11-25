@@ -47,3 +47,7 @@ print dict(zip(fields, values))
 
 ID, NAME, AGE = 0, 1, 2
 print values[ID]
+
+
+d = {x: x*x for x in range(10)}
+print d
