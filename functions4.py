@@ -20,4 +20,4 @@ d = {'a': f_a, 'b': f_b, 'c': f_c}
 def default():
     print 'default'
 
-d.get(action, default)()                # default function as default value for get 
+d.get(action, default)()                # default function as default value for get
