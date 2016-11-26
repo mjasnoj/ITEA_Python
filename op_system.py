@@ -35,7 +35,7 @@ for path, dirs, files in os.walk('/usr/lib/gcc'):
         print path
 
 
-import shutil                               # some additional FS functions
+import shutil                               # some additional FS functions. filecmp, etc
 
 import tempfile                             # for temp files exist during program execution
 
