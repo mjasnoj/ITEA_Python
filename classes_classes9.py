@@ -48,10 +48,10 @@ AAA.h()
 
 class BBB(object):
     @staticmethod
-    def f():
+    def f():                        # не привязан ни к чему. вызывается без селф
         print "f"
     @classmethod
-    def g(cls):                     # class method
+    def g(cls):                     # class method. Имеет досутп к переменным класса из которого вызывается
         print cls.a
 
 
@@ -62,3 +62,22 @@ b = CCC()
 
 b.f()
 b.g()
+
+
+"""
+>>> class A(object):
+...     instances = []
+...     def __init__(self):
+...             self.__class__.instances.append(self)
+...     @classmethod
+...     def get_inst(cls):
+...             return cls.instances
+...
+>>> A()
+<__main__.A object at 0x7fcee6bce090>
+>>> A()
+<__main__.A object at 0x7fcee6bce110>
+>>> A.get_inst()
+[<__main__.A object at 0x7fcee6bce090>, <__main__.A object at 0x7fcee6bce110>]
+
+"""

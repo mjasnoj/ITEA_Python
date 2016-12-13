@@ -6,14 +6,15 @@ class A(object):
         super(A, self).__init__()
 
 class B(A):
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         print "B"
 #        super(B, self).__init__()
 
+
 class C(A):
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         print "C"
-        super(C, self).__init__()
+        super(C, self).__init__(*args, **kwargs)
 
 class D(B):
     def __init__(self):
@@ -67,4 +68,7 @@ G
 E
 B
 <classes_classes8.H object at 0x7f38c8de0390>
+
+
+если есть супер в иерархии хоть где-то, то он должен быть везде
 """

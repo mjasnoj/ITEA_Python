@@ -35,7 +35,7 @@ print Person('Aphill2', 45) > Person('Aphill2', 32)         # not correct. __gt_
 
 
 
-
+"""
 
 >>> def scale(f):
 ...     def wrapper(x):
@@ -61,10 +61,12 @@ print Person('Aphill2', 45) > Person('Aphill2', 32)         # not correct. __gt_
 ...
 >>> @scale
 ... def double(x):
-...     """Double x"""
 ...     return 2*x
+...     """Double x"""
 ...
 >>> double
 <function wrapper at 0x7f1414add6e0>
 >>> double.__name__
 'wrapper'
+
+"""

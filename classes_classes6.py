@@ -14,7 +14,7 @@ class ReprMixin(object):
 
 class TableWithBox(ReprMixin, Table):
     def __init__(self, *args, **kwargs):                      # если не задать инит он будет вызван из базового класса
-        super(TableWithBox, self).__init__(*args, **kwargs)   # super - метод, возвращающий базовый класс
+        super(TableWithBox, self).__init__(*args, **kwargs)   # super - метод, возвращающий базовый класс. Дает возможность использовать конструктор базового класса.
         self.box_is_opened = False
 
 t = Table(100, 50, 60)
