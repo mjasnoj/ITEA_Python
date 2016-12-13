@@ -5,24 +5,31 @@ import Queue
 
 q = Queue.Queue()
 
-def get():
-    while True:
-        url = q.get()
-        r = urllib2.urlopen(url)
-        print len(r.read())
-        q.task_done()
+is_finished = False
+
+def get(i):
+    while not is_finished:
+        try:
+            url = q.get(False)
+            r = urllib2.urlopen(url)
+            print i, len(r.read())
+            q.task_done()
+        except Queue.Empty:
+            pass
 
 t1 = datetime.datetime.now()
 
 ts = []
 for i in range(5):
-    t = threading.Thread(target=get)
+    t = threading.Thread(target=get, args=(i,))
     t.start()
 
 for j in range(20):
     q.put('http://lifecell.ua/uk/')
 
 q.join()
+is_finished = True
+
 
 t2 = datetime.datetime.now()
 
