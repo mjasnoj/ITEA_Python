@@ -9,3 +9,9 @@ def get(url):
 
 p = multiprocessing.Pool(20)                        # optimal poool size depends on Inet speed and response Time
 print p.map(get, ['http://lifecell.ua/uk/']*20)
+
+
+
+
+# multiproc - for calculations
+# threads - for remote resources
