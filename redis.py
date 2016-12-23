@@ -11,3 +11,6 @@ True
 1L
 >>> r.lrange('l', 0, -1)
 ['1']
+
+
+pip install redis

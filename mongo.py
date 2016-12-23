@@ -10,3 +10,6 @@ ObjectId('58597ce49a40ca124084dfaf')
 ...     print doc
 ...
 {u'a': 1, u'c': [1, 2, 3, 4, 5], u'_id': ObjectId('58597ce49a40ca124084dfaf'), u'b': 5}
+
+
+pip install pymongo
